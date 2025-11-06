@@ -3,6 +3,7 @@ import Header from "./components/Header.jsx";
 import FilterPanel from "./components/FilterPanel.jsx";
 import MapView from "./components/MapView.jsx";
 import InfoBar from "./components/InfoBar.jsx";
+import HeroCover from "./components/HeroCover.jsx";
 
 // Simple bilingual dictionary
 const DICT = {
@@ -165,6 +166,7 @@ export default function App() {
   return (
     <div dir={lang === "ar" ? "rtl" : "ltr"} className="min-h-screen flex flex-col bg-gradient-to-br from-emerald-50 to-sky-50 text-gray-900">
       <Header lang={lang} t={t} onToggleLang={() => setLang((l) => (l === "en" ? "ar" : "en"))} />
+      <HeroCover t={t} />
       <InfoBar t={t} lang={lang} />
 
       <main className="flex-1">
